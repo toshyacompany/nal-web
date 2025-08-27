@@ -1,5 +1,6 @@
 "use client";
 
+import { paths } from "@/lib/path";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -12,15 +13,15 @@ const Header = () => {
       <div className="container">
         <header className="flex items-center justify-between h-[100px]">
           <div className="flex items-center gap-32">
-            <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-4">
               <Image src="/logo.png" alt="NAC Logo" width={140} height={60} />
-            </div>
+            </Link>
 
-            <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-800">
-              <Link href="#" className="hover:text-[#ff9934]">
+            <nav className="items-center hidden text-sm font-semibold text-gray-800 md:flex gap-7">
+              <Link href="/" className="hover:text-[#ff9934]">
                 HOME
               </Link>
-              <Link href="#" className="hover:text-[#ff9934]">
+              <Link href={paths.public.about} className="hover:text-[#ff9934]">
                 ABOUT
               </Link>
               <Link href="#" className="hover:text-[#ff9934]">
@@ -43,7 +44,7 @@ const Header = () => {
             {/* Mobile Hamburger */}
             <button
               aria-label="Open menu"
-              className="md:hidden p-2 rounded hover:bg-gray-100"
+              className="p-2 rounded md:hidden hover:bg-gray-100"
               onClick={() => setOpen(true)}
             >
               <svg
@@ -74,7 +75,7 @@ const Header = () => {
           aria-hidden
         />
 
-        <aside className="absolute top-0 left-0 w-3/4 max-w-xs h-full bg-white shadow-lg p-6">
+        <aside className="absolute top-0 left-0 w-3/4 h-full max-w-xs p-6 bg-white shadow-lg">
           <div className="flex items-center justify-between mb-6">
             <Image src="/logo.png" alt="NAC Logo" width={120} height={48} />
             <button
@@ -98,7 +99,7 @@ const Header = () => {
             </button>
           </div>
 
-          <nav className="flex flex-col gap-4 text-gray-800 font-semibold">
+          <nav className="flex flex-col gap-4 font-semibold text-gray-800">
             <Link href="#" onClick={() => setOpen(false)} className="py-2">
               HOME
             </Link>

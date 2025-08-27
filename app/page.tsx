@@ -6,7 +6,6 @@ import IndustrialSuccess from "./components/IndustrialSuccess";
 import Clients from "./components/Clients";
 import Serve from "./components/Serve";
 import Blogs from "./components/Blogs";
-import Footer from "./components/Footer";
 
 export default function Page() {
   return (
@@ -19,7 +18,6 @@ export default function Page() {
         <Clients />
         <Serve />
         <Blogs />
-        <Footer />
       </main>
     </div>
   );

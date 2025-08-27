@@ -4,6 +4,7 @@ import "./globals.css";
 // ...existing code...
 import Header from "./components/Header";
 import TopBar from "./components/TopBar";
+import FooterSwitcher from "./components/FooterSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <TopBar />
         <Header />
         <div className="">{children}</div>
+        <FooterSwitcher />
       </body>
     </html>
   );
