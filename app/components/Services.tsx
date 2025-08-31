@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   const cards = [
@@ -25,8 +26,8 @@ export default function Services() {
   ];
 
   return (
-    <section className="container px-6 py-16 mx-auto">
-      <div className="flex items-start justify-between mb-8">
+    <section className="container px-6 py-16 mx-auto mobile:px-4 tablet:px-6">
+      <div className="flex items-start justify-between mb-8 mobile:flex-col mobile:items-center mobile:gap-6 tablet:items-start">
         <div>
           <div className="flex items-center gap-3 mb-2">
             <div className="flex flex-col gap-2">
@@ -38,43 +39,58 @@ export default function Services() {
               Our Services
             </span>
           </div>
-          <h2 className="text-5xl font-extrabold leading-tight">
+          <h2 className="text-5xl font-extrabold leading-tight text-[#131313]">
             Professional Services
           </h2>
-          <p className="max-w-[44rem] mt-3 text-gray-600 text-[22px]">
+          <p className="max-w-[44rem] mt-3 text-gray-600 text-[22px] font-afacad">
             We provide reliable manpower, equipment, and material support to
             empower industries and deliver projects safely, on time, and with
             quality.
           </p>
         </div>
 
-        <div>
-          <button className="bg-[#ff9934] text-white font-semibold px-14 py-4 rounded shadow">
+        <div className="mobile:w-full mobile:flex mobile:justify-center">
+          <button className="bg-[#ff9934] text-white font-semibold px-14 py-4 rounded shadow mobile:px-6 mobile:py-2 mobile:text-sm">
             ALL SERVICES
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((c) => (
-          <div key={c.title} className="relative overflow-hidden rounded h-80">
-            <Image src={c.img} alt={c.title} fill className="object-cover" />
-            <div
-              aria-hidden
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 152, 0.4) 100%)",
-              }}
-            />
-            <div className="absolute text-white bottom-6 left-6">
-              <h3 className="text-3xl font-bold whitespace-pre-line">
-                {c.title}
-              </h3>
-              <p className="max-w-xs mt-2 text-xl">{c.subtitle}</p>
-            </div>
-          </div>
-        ))}
+      <div className="grid grid-cols-1 gap-6 tablet:grid-cols-2 lap-sm:grid-cols-3 lg-desktop:grid-cols-4 font-afacad">
+        {cards.map((c) => {
+          const slug = c.title
+            .split("\n")[0]
+            .toLowerCase()
+            .replace(/\s+/g, "-");
+          return (
+            <Link key={c.title} href={`/services/${slug}`} className="block">
+              <div className="relative overflow-hidden rounded h-80 mobile:h-[220px] tablet:h-64 lap-sm:h-72">
+                <Image
+                  src={c.img}
+                  alt={c.title}
+                  fill
+                  className="object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 152, 0.4) 100%)",
+                  }}
+                />
+                <div className="absolute text-white bottom-6 left-6">
+                  <h3 className="text-3xl font-bold whitespace-pre-line mobile:text-2xl tablet:text-2xl font-afacad">
+                    {c.title}
+                  </h3>
+                  <p className="max-w-xs mt-2 text-xl mobile:text-base">
+                    {c.subtitle}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

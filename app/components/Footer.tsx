@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full">
+    <footer className="w-full font-manrope">
       <div
         className="w-full py-16"
         style={{
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
 
             {/* Services column */}
-            <div className="col-span-1 pl-8 md:pl-10">
+            <div className="col-span-1 pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-bold text-[#000098]">
                 Our Services
               </h4>
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             {/* Offices column */}
-            <div className="col-span-1 pl-8 md:pl-10">
+            <div className="col-span-1 pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-bold text-white">
                 Head Office
               </h4>
@@ -83,9 +83,9 @@ const Footer = () => {
             </div>
 
             {/* Subscribe column */}
-            <div className="col-span-1 pl-8 md:pl-10">
+            <div className="col-span-1 pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-bold text-white">Subscribe</h4>
-              <p className="mb-6 text-base font-medium text-orange-400">
+              <p className="mb-6 text-base font-medium text-[#FF9934]">
                 Get Our Latest Updates &amp; Offers !
               </p>
 

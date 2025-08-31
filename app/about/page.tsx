@@ -5,7 +5,7 @@ import WhoWeAre from "./[components]/WhoWeAre";
 import FreeConsultation from "./[components]/FreeConsultation";
 import Team from "./[components]/Team";
 import Services from "../components/Services";
-import StayConnected from "./[components]/StayConnected";
+import StayConnected from "../components/StayConnected";
 
 const Page = () => {
   return (

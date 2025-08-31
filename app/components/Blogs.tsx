@@ -36,27 +36,27 @@ const posts = [
 
 const Blogs = () => {
   return (
-    <section className="container px-6 py-16 mx-auto">
+    <section className="container px-6 py-16 mx-auto font-urbanist">
       <div className="max-w-full">
-        <div className="flex items-center justify-between gap-6 mb-8">
+        <div className="flex items-center justify-between gap-6 mb-8 mobile:flex-col mobile:items-start mobile:gap-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
               <div className="flex flex-col gap-2">
-                <span className="w-10 h-[2px] bg-orange-400 rounded" />
-                <span className="w-10 h-[2px] bg-orange-400 rounded" />
+                <span className="w-10 h-[2px] bg-orange-400 rounded mobile:w-6 mobile:h-[1.5px]" />
+                <span className="w-10 h-[2px] bg-orange-400 rounded mobile:w-6 mobile:h-[1.5px]" />
               </div>
 
               <span className="text-sm font-semibold tracking-wide text-orange-400 uppercase">
                 From the blog
               </span>
             </div>
-            <h2 className="text-5xl font-extrabold leading-tight">
+            <h2 className="text-5xl font-extrabold leading-tight mobile:text-3xl text-[#131313]">
               Blog & Articles
             </h2>
           </div>
 
           <div>
-            <button className="inline-block px-12 py-3 text-sm font-semibold tracking-wide uppercase border border-gray-300 rounded-md hover:bg-gray-50">
+            <button className="inline-block px-12 py-3 text-sm font-semibold tracking-wide uppercase border border-gray-300 rounded-md hover:bg-gray-50 mobile:px-4 mobile:py-2 mobile:text-sm text-[#131313]">
               See more blog
             </button>
           </div>
@@ -99,7 +99,9 @@ const Blogs = () => {
                   </div>
                 </div>
 
-                <h3 className="mb-3 text-2xl font-bold">{post.title}</h3>
+                <h3 className="mb-3 text-2xl text-[#131313] font-bold">
+                  {post.title}
+                </h3>
                 <p className="mb-6 text-gray-600">{post.excerpt}</p>
 
                 <hr className="border-t border-gray-100" />

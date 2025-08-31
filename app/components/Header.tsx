@@ -9,7 +9,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white shadow-sm">
+    <div className="font-extrabold bg-white shadow-sm font-urbanist">
       <div className="container">
         <header className="flex items-center justify-between h-[100px]">
           <div className="flex items-center gap-32">
@@ -24,13 +24,22 @@ const Header = () => {
               <Link href={paths.public.about} className="hover:text-[#ff9934]">
                 ABOUT
               </Link>
-              <Link href="#" className="hover:text-[#ff9934]">
+              <Link
+                href={paths.public.services}
+                className="hover:text-[#ff9934]"
+              >
                 SERVICES
               </Link>
-              <Link href="#" className="hover:text-[#ff9934]">
+              <Link
+                href={paths.public.projects}
+                className="hover:text-[#ff9934]"
+              >
                 PROJECTS
               </Link>
-              <Link href="#" className="hover:text-[#ff9934]">
+              <Link
+                href={paths.public.contact}
+                className="hover:text-[#ff9934]"
+              >
                 CONTACT
               </Link>
             </nav>
@@ -100,19 +109,35 @@ const Header = () => {
           </div>
 
           <nav className="flex flex-col gap-4 font-semibold text-gray-800">
-            <Link href="#" onClick={() => setOpen(false)} className="py-2">
+            <Link href="/" onClick={() => setOpen(false)} className="py-2">
               HOME
             </Link>
-            <Link href="#" onClick={() => setOpen(false)} className="py-2">
+            <Link
+              href={paths.public.about}
+              onClick={() => setOpen(false)}
+              className="py-2"
+            >
               ABOUT
             </Link>
-            <Link href="#" onClick={() => setOpen(false)} className="py-2">
+            <Link
+              href={paths.public.services}
+              onClick={() => setOpen(false)}
+              className="py-2"
+            >
               SERVICES
             </Link>
-            <Link href="#" onClick={() => setOpen(false)} className="py-2">
+            <Link
+              href={paths.public.projects}
+              onClick={() => setOpen(false)}
+              className="py-2"
+            >
               PROJECTS
             </Link>
-            <Link href="#" onClick={() => setOpen(false)} className="py-2">
+            <Link
+              href={paths.public.contact}
+              onClick={() => setOpen(false)}
+              className="py-2"
+            >
               CONTACT
             </Link>
           </nav>

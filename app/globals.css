@@ -88,3 +88,45 @@ body {
     display: none;
   }
 }
+
+/* ----------------------------
+   Responsive helpers & fluid typography
+   - These utilities do not change existing component classes.
+   - Use Tailwind variants (tablet:, lap-sm:, lg-desktop:) in components
+     to apply breakpoint-specific rules without touching Mac layout.
+   ---------------------------- */
+
+@layer utilities {
+  /* Fluid typography helpers using clamp() for smooth scaling */
+  .text-fluid-xl {
+    font-size: clamp(1.375rem, 1.125rem + 1.2vw, 2.125rem); /* 22px - 34px */
+  }
+  .text-fluid-lg {
+    font-size: clamp(1.125rem, 0.9rem + 0.8vw, 1.5rem); /* 18px - 24px */
+  }
+  .text-fluid-base {
+    font-size: clamp(0.95rem, 0.8rem + 0.3vw, 1rem); /* 15px - 16px */
+  }
+
+  /* Max centered container for very wide screens */
+  .max-centered {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Subtle card hover for non-mobile (tablet+) */
+  @media (min-width: 641px) {
+    .card-hover-scale:hover {
+      transform: translateY(-6px) scale(1.01);
+      transition: transform 250ms ease;
+    }
+  }
+}
+
+/* Container caps for large desktop to avoid full-bleed stretching */
+@media (min-width: 1367px) {
+  .container {
+    max-width: 1320px;
+  }
+}

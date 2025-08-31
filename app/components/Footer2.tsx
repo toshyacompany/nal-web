@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer2 = () => {
   return (
-    <footer className="w-full bg-[#0b0b0b] text-white">
+    <footer className="w-full bg-[#0b0b0b] text-white font-manrope">
       <div className="py-16">
         <div className="container relative px-6 mx-auto">
           <div className="grid items-start grid-cols-1 gap-8 md:grid-cols-4">
@@ -38,7 +38,7 @@ const Footer2 = () => {
             </div>
 
             {/* Services column */}
-            <div className="pl-8 md:pl-10">
+            <div className="pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-semibold text-white">
                 Our Services
               </h4>
@@ -51,7 +51,7 @@ const Footer2 = () => {
             </div>
 
             {/* Offices column */}
-            <div className="pl-8 md:pl-10">
+            <div className="pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-semibold text-white">
                 Head Office
               </h4>
@@ -78,7 +78,7 @@ const Footer2 = () => {
             </div>
 
             {/* Subscribe column */}
-            <div className="pl-8 md:pl-10">
+            <div className="pl-8 md:pl-5">
               <h4 className="mb-4 text-2xl font-semibold text-white">
                 Subscribe
               </h4>

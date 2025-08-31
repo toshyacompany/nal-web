@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { urbanist, afacad } from "../lib/constants";
 import "./globals.css";
-// ...existing code...
+
 import Header from "./components/Header";
 import TopBar from "./components/TopBar";
 import FooterSwitcher from "./components/FooterSwitcher";
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${urbanist.className} ${afacad.className} antialiased bg-white`}
       >
         <TopBar />
         <Header />

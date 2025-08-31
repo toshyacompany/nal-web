@@ -23,7 +23,7 @@ const Team = () => {
         <h3 className="mb-2 text-2xl font-semibold text-[#0D0E1D] md:text-3xl lg:text-[56px] leading-[63.84px]">
           Meet the team behind
         </h3>
-        <h2 className="mb-12 text-3xl font-semibold tracking-wider md:text-4xl lg:text-[56px] leading-[63.84px]">
+        <h2 className="mb-12 text-3xl font-semibold tracking-wider md:text-4xl lg:text-[56px] leading-[63.84px] text-[#0D0E1D]">
           NAL ARABIA
         </h2>
 
