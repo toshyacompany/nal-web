@@ -5,7 +5,7 @@ const ServicesHero = () => {
     <section className="w-full">
       <div
         className="relative w-full h-56 md:h-80 lg:h-[420px] bg-center bg-cover"
-        style={{ backgroundImage: "url('/aboutHero.png')" }}
+        style={{ backgroundImage: "url('/images/constructionwork.jpeg')" }}
       >
         {/* dark overlay */}
         <div className="absolute inset-0 bg-black/50" />
